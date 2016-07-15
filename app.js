@@ -13,16 +13,13 @@
 
             $routeProvider
                 .when('/', {
-                    templateUrl: '/templates/home.html'
+                    templateUrl: 'templates/home.html'
                 })
                 .when('/page1', {
-                    templateUrl: '/templates/page1.html'
+                    templateUrl: 'templates/page1.html'
                 })
                 .when('/page2', {
-                    templateUrl: '/templates/page2.html'
-                })
-                .otherwise({
-                    redirectTo: '/'
+                    templateUrl: 'templates/page2.html'
                 });
 
         // None of that hash bang crap
