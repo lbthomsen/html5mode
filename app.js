@@ -5,16 +5,30 @@
     var appName = 'app';
 
     var app = angular.module(appName, [
-        
+        'ngRoute'
     ]);
 
-    app.config(['$locationProvider',
-        function ($locationProvider) {
+    app.config(['$locationProvider', '$routeProvider', 
+        function ($locationProvider, $routeProvider) {
+
+            $routeProvider
+                .when('/', {
+                    templateUrl: '/templates/home.html'
+                })
+                .when('/page1', {
+                    templateUrl: '/templates/page1.html'
+                })
+                .when('/page2', {
+                    templateUrl: '/templates/page2.html'
+                })
+                .otherwise({
+                    redirectTo: '/'
+                });
 
         // None of that hash bang crap
         $locationProvider.html5Mode({
-            enabled:true,
-            requireBase: false
+            enabled: true,
+            requireBase: true
         });
     }
 
