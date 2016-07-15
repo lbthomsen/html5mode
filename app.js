@@ -13,13 +13,13 @@
 
             $routeProvider
                 .when('/', {
-                    templateUrl: 'templates/home.html'
+                    templateUrl: 'templates/problem.html'
                 })
-                .when('/page1', {
-                    templateUrl: 'templates/page1.html'
+                .when('/solution', {
+                    templateUrl: 'templates/solution.html'
                 })
-                .when('/page2', {
-                    templateUrl: 'templates/page2.html'
+                .when('/about', {
+                    templateUrl: 'templates/about.html'
                 });
 
         // None of that hash bang crap
